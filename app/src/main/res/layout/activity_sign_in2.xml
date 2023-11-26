@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    android:background="@color/white"
+    tools:context=".SignInActivity2">
+
+    <TextView
+        android:id="@+id/letSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lets Sign you in"
+        android:textSize="40sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:id="@+id/welcomeBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back , \nYou have been missed"
+        android:textSize="25sp"
+        android:textColor="#000000"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/letSignIn"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingTop="20dp"
+        app:boxCornerRadiusTopEnd="6dp"
+        app:boxCornerRadiusBottomEnd="6dp"
+        app:boxCornerRadiusTopStart="6dp"
+        app:boxCornerRadiusBottomStart="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeBack">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email, phone $ username"
+            android:inputType="textEmailAddress"
+            android:textSize="16sp"
+            android:textColor="#000000"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:boxCornerRadiusTopEnd="6dp"
+        app:boxCornerRadiusBottomEnd="6dp"
+        app:boxCornerRadiusTopStart="6dp"
+        app:boxCornerRadiusBottomStart="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            android:textColor="#000000"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingRight="2dp"
+        android:text="Forgot Password?"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:backgroundTint="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:cornerRadius="10dp"
+        android:backgroundTint="#6d64ff"
+        android:text="Sign in"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/forgotPassword"
+        />
+
+    <View
+        android:id="@+id/side1"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="25dp"
+        android:background="#57706D6D"
+        app:layout_constraintTop_toBottomOf="@id/signIn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/or"
+        />
+    <TextView
+        android:id="@+id/or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" or "
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signIn"
+        />
+
+    <View
+        android:id="@+id/side2"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="25dp"
+        android:background="#57706D6D"
+        app:layout_constraintStart_toEndOf="@+id/or"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signIn"
+        />
+
+    <ImageButton
+        android:id="@+id/google"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/google"
+        android:contentDescription="Google Login"
+        android:layout_marginBottom="80dp"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/side1" />
+
+    <ImageButton
+        android:id="@+id/facebook"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="80dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/facebook"
+        android:contentDescription="Facebook Login"
+        app:layout_constraintStart_toEndOf="@+id/google"
+        app:layout_constraintTop_toBottomOf="@id/or"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <ImageButton
+        android:id="@+id/apple"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/apple"
+        android:layout_marginBottom="80dp"
+        android:layout_marginLeft="25dp"
+        android:contentDescription="Apple Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/facebook"
+        app:layout_constraintTop_toBottomOf="@id/side2"
+        />
+
+    <TextView
+        android:id="@+id/account"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="0dp"
+        android:text="Don't have an account ? "
+        android:textSize="15sp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/google"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/register"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="28dp"
+        android:paddingLeft="12dp"
+        android:text="Register now"
+        android:textSize="16dp"
+        app:cornerRadius="10dp"
+        android:backgroundTint="#00FFFFFF"
+        android:textColor="#3973B6"
+        app:layout_constraintTop_toBottomOf="@+id/apple"
+        app:layout_constraintStart_toEndOf="@id/account"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
